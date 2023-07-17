@@ -15,11 +15,10 @@ export default function Layout({ title, children }: IMainLayoutParams) {
         <title>{title ? title : "Shoes Shop"}</title>
         <meta
           name="description"
-          content="Shoes Shop. The best solution for your comfort"
+          content="Job searching website"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-
       <styles.Layout>
         <Header />
         <styles.Main>{children}</styles.Main>

@@ -1,20 +1,17 @@
 import { createTheme } from "@mui/material/styles";
 
-// Create a theme instance.
+// Theme instance
 let theme = createTheme({
   palette: {
     primary: {
-      main: "#FE645E",
-      dark: "#e45a54",
-      contrastText: "#FFFFFF",
+      main: "#FFFFFF",
+      dark: "#F7F7F8",
+      light: "#5E96FC",
     },
     text: {
-      primary: "#5C5C5C",
-      secondary: "#000000",
-      iconLight: "#6E7278",
-      iconDark: "#292D32",
-      caption: "#494949",
-      selection: "rgb(254, 131, 126, 0.4)",
+      primary: "#232134",
+      secondary: "#5E96FC",
+      caption: "#ACADB9",
     },
   },
 });
@@ -22,59 +19,32 @@ let theme = createTheme({
 theme = createTheme(theme, {
   typography: {
     h2: {
-      fontSize: 45,
-      fontWeight: 500,
-      [theme.breakpoints.between("xs", "sm")]: {
-        fontSize: 30,
-      },
-    },
-    h3: {
-      fontSize: 30,
-      fontWeight: 500,
-      [theme.breakpoints.between("xs", "sm")]: {
-        fontSize: 12,
-      },
-    },
-    h4: {
-      fontSize: 25,
-      fontWeight: 500,
+      fontSize: 28,
+      fontWeight: 700,
+      color: theme.palette.text.primary,
       [theme.breakpoints.between("xs", "sm")]: {
         fontSize: 20,
       },
     },
-    h5: {
+    h3: {
+      fontSize: 24,
+      fontWeight: 600,
+      [theme.breakpoints.between("xs", "sm")]: {
+        fontSize: 16,
+      },
+    },
+    h4: {
       fontSize: 20,
-      fontWeight: 500,
+      fontWeight: 400,
       [theme.breakpoints.between("xs", "sm")]: {
-        fontSize: 8,
+        fontSize: 12,
       },
     },
-    h6: {
+    h5: {
       fontSize: 16,
-      fontWeight: 500,
-    },
-    body1: {
-      fontSize: 15,
-      fontWeight: 300,
-      color: theme.palette.text.primary,
+      fontWeight: 400,
       [theme.breakpoints.between("xs", "sm")]: {
-        fontSize: 12,
-      },
-    },
-    body2: {
-      fontSize: 12,
-      fontWeight: 500,
-      color: theme.palette.text.primary,
-      [theme.breakpoints.between("xs", "sm")]: {
-        fontWeight: 300,
-      },
-    },
-    caption: {
-      color: theme.palette.text.caption,
-      fontWeight: 500,
-      fontSize: 15,
-      [theme.breakpoints.between("xs", "sm")]: {
-        fontSize: 12,
+        fontSize: 10,
       },
     },
   },
@@ -82,11 +52,11 @@ theme = createTheme(theme, {
     MuiButton: {
       styleOverrides: {
         root: {
-          fontSize: 16,
-          fontWeight: 500,
+          fontSize: 14,
+          fontWeight: 600,
           borderRadius: 8,
           textTransform: "none",
-          padding: 9,
+          padding: 10,
         },
       },
     },
@@ -94,8 +64,8 @@ theme = createTheme(theme, {
       styleOverrides: {
         root: {
           fontFamily: "inherit",
-          fontSize: 15,
-          fontWeight: 300,
+          fontSize: 16,
+          fontWeight: 400,
           color: theme.palette.text.caption,
         },
         notchedOutline: {
@@ -113,8 +83,8 @@ theme = createTheme(theme, {
       styleOverrides: {
         root: {
           fontFamily: "inherit",
-          fontSize: 15,
-          fontWeight: 300,
+          fontSize: 16,
+          fontWeight: 400,
           color: theme.palette.text.caption,
         },
         notchedOutline: {
@@ -133,17 +103,14 @@ theme = createTheme(theme, {
         root: {
           fontFamily: "inherit",
           "&::selection": {
-            backgroundColor: theme.palette.text.selection,
+            // backgroundColor: theme.palette.text.primary,
           },
         },
       },
       defaultProps: {
         variantMapping: {
-          h3Bold: "h3",
-          h3Thin: "h3",
-          h4Warning: "h4",
-          h4Thin: "h4",
           h4Bold: "h4",
+          h5Bold: "h5",
         },
       },
     },
@@ -151,7 +118,7 @@ theme = createTheme(theme, {
       styleOverrides: {
         root: {
           color: theme.palette.text.caption,
-          padding: "0px 1px 1px 10px",
+          padding: "5px",
           ".MuiSvgIcon-root": {
             fontSize: "1rem",
           },
@@ -164,41 +131,18 @@ theme = createTheme(theme, {
 theme = createTheme(theme, {
   typography: {
     ...theme.typography,
-    h3Thin: {
-      ...theme.typography.h3,
-      fontWeight: 400,
-      [theme.breakpoints.between("xs", "sm")]: {
-        fontSize: 20,
-      },
-    },
-    h3Bold: {
-      ...theme.typography.h3,
-      fontWeight: 600,
-      [theme.breakpoints.between("xs", "sm")]: {
-        fontSize: 12,
-      },
-    },
-    h4Warning: {
-      ...theme.typography.h4,
-      fontWeight: 600,
-      color: theme.palette.primary.main,
-      [theme.breakpoints.between("xs", "sm")]: {
-        fontSize: 12,
-      },
-    },
-    h4Thin: {
-      ...theme.typography.h4,
-      fontWeight: 400,
-    },
     h4Bold: {
       ...theme.typography.h4,
       fontWeight: 600,
-    },
-    btnIconText: {
-      fontWeight: 400,
-      fontSize: 24,
       [theme.breakpoints.between("xs", "sm")]: {
         fontSize: 12,
+      },
+    },
+    h5Bold: {
+      ...theme.typography.h5,
+      fontWeight: 600,
+      [theme.breakpoints.between("xs", "sm")]: {
+        fontSize: 10,
       },
     },
   },
